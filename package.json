@@ -1,26 +1,27 @@
 {
-	"name": "template",
+	"name": "wordpress-custom-theme-template",
 	"version": "1.0.0",
 	"private": true,
-	"description": "My repository template.",
+	"description": "My personal WordPress template to use with a child theme of the latest default WordPress theme.",
 	"keywords": [
 		"template",
 		"repository",
 		"template-project",
 		"repository-template",
 		"repo-template",
-		"template-repository"
+		"template-repository",
+		"wordpress-custom-theme-template"
 	],
-	"homepage": "https://github.com/germanfrelo/template#readme",
+	"homepage": "https://github.com/germanfrelo/wordpress-custom-theme-template#readme",
 	"bugs": {
-		"url": "https://github.com/germanfrelo/template/issues"
+		"url": "https://github.com/germanfrelo/wordpress-custom-theme-template/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/germanfrelo/template.git"
+		"url": "https://github.com/germanfrelo/wordpress-custom-theme-template.git"
 	},
 	"license": "ISC",
-	"author": "Germán Freixinós López",
+	"author": "Germán Freixinós",
 	"type": "module",
 	"main": "",
 	"scripts": {
