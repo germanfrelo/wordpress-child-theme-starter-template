@@ -1,0 +1,29 @@
+{
+	// Formatting
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+		"editor.renderWhitespace": "boundary"
+	},
+	"editor.formatOnSave": true,
+
+	// Lint CSS with Stylelint
+	// Disable VS Code's built-in linters to prevent them from reporting the same errors as Stylelint
+	"stylelint.enable": true, // default
+	"css.validate": false,
+	"less.validate": false,
+	"scss.validate": false,
+
+	// Useful code actions on save
+	"editor.codeActionsOnSave": {
+		/* As object, "source.fixAll" actions are prioritized and executed first. Ref:
+		https://github.com/microsoft/vscode/blob/1.90.0/src/vs/workbench/contrib/codeEditor/browser/saveParticipants.ts#L300-L332. */
+		"source.addMissingImports": "explicit",
+		"source.fixAll.eslint": "explicit",
+		"source.fixAll.markdownlint": "explicit",
+		"source.fixAll.stylelint": "explicit",
+		// Haven't decided yet:
+		// "source.organizeImports": "explicit", // sort imports + remove unused imports
+		"source.sortImports": "explicit"
+	}
+}

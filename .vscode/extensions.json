@@ -1,0 +1,12 @@
+{
+	"recommendations": [
+		// Formatting
+		"EditorConfig.EditorConfig",
+		"esbenp.prettier-vscode",
+		// Linting
+		"DavidAnson.vscode-markdownlint",
+		"dbaeumer.vscode-eslint",
+		"stylelint.vscode-stylelint",
+		"usernamehw.errorlens"
+	]
+}

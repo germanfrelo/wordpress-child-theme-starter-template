@@ -1,0 +1,67 @@
+{
+	"name": "template",
+	"version": "1.0.0",
+	"private": true,
+	"description": "My repository template.",
+	"keywords": [
+		"template",
+		"repository",
+		"template-project",
+		"repository-template",
+		"repo-template",
+		"template-repository"
+	],
+	"homepage": "https://github.com/germanfrelo/template#readme",
+	"bugs": {
+		"url": "https://github.com/germanfrelo/template/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/germanfrelo/template.git"
+	},
+	"license": "ISC",
+	"author": "Germán Freixinós López",
+	"type": "module",
+	"main": "",
+	"scripts": {
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"lint": "npm run lint:css && npm run lint:js && npm run lint:md",
+		"lint:fix": "npm run lint:css:fix && npm run lint:js:fix && npm run lint:md:fix",
+		"lint:css": "stylelint --max-warnings 0 \"**/*.css\"",
+		"lint:css:fix": "npm run lint:css -- --fix",
+		"lint:js": "eslint --max-warnings 0",
+		"lint:js:fix": "npm run lint:js -- --fix",
+		"lint:md": "markdownlint-cli2",
+		"lint:md:fix": "npm run lint:md -- --fix",
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"*.css": [
+			"stylelint --max-warnings 0",
+			"prettier --write"
+		],
+		"*.js": [
+			"eslint --max-warnings 0 --no-warn-ignored",
+			"prettier --write"
+		],
+		"*.md": [
+			"markdownlint-cli2 --fix"
+		],
+		"!(*.css|*.js|*.md)": [
+			"prettier --write --ignore-unknown"
+		]
+	},
+	"devDependencies": {
+		"@eslint/js": "9.6.0",
+		"eslint": "9.6.0",
+		"globals": "15.8.0",
+		"husky": "9.0.11",
+		"lint-staged": "15.2.7",
+		"markdownlint-cli2": "0.13.0",
+		"prettier": "3.3.2",
+		"stylelint": "16.6.1",
+		"stylelint-config-recess-order": "5.0.1",
+		"stylelint-config-standard": "36.0.1"
+	}
+}
