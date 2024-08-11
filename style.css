@@ -9,3 +9,321 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Tested up to: 6.6.1
 */
+
+/*
+	STRUCTURE:
+	0. Reset/Normalize
+	1. Global custom properties
+	2. Global and inherited styles
+	3. Composition / Layout primitives
+	4. Utility classes
+	5. Blocks
+	6. Exceptions
+*/
+
+/* ============ 0. RESET/NORMALIZE ============ */
+
+/* Document
+======================================== */
+
+/**
+ * 1. Use border box sizing by default, globally.
+ * 2. Backgrounds do not repeat by default.
+ * 3. Mask images do not repeat by default.
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box; /* 1 */
+	background-repeat: no-repeat; /* 2 */
+	/* stylelint-disable-next-line property-no-vendor-prefix -- Intended. */
+	-webkit-mask-repeat: no-repeat; /* 3 */
+	mask-repeat: no-repeat; /* 3 */
+}
+
+/*
+1. Breaks words to prevent text overflow.
+2. Use a 4-space tab width instead of the default 8.
+3. Prevent WebKit-based browsers on iOS (all iOS browsers) from automatically increasing the default text size in landscape orientation. Reference:
+- https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
+- https://css-tricks.com/your-css-reset-needs-text-size-adjust-probably/
+*/
+
+html {
+	overflow-wrap: break-word; /* 1 */
+	tab-size: 4; /* 2 */
+	/* stylelint-disable-next-line property-no-vendor-prefix -- Intended. */
+	-webkit-text-size-adjust: none; /* 3 */
+}
+
+/*
+Smooth scrolling, but only when focused in the page to prevent unnaturally scrolling when tabbing though the results of a search.
+*/
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/*
+When users prefer reduced motion:
+1. Remove fixed background attachment.
+2. Remove transitions.
+3. Remove animations/immediately jump any animation to the end point.
+4. Remove timed scrolling behaviors.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		background-attachment: initial !important; /* 1 */
+		transition-delay: 0s !important; /* 2 */
+		transition-duration: 0s !important; /* 2 */
+		animation-duration: 1ms !important; /* 3 */
+		animation-delay: -1ms !important; /* 3 */
+		animation-iteration-count: 1 !important; /* 3 */
+		scroll-behavior: auto !important; /* 4 */
+	}
+
+	html:focus-within {
+		scroll-behavior: auto; /* 4 */
+	}
+}
+
+/* Sections
+======================================== */
+
+/*
+Allow percentage-based heights.
+*/
+
+/* stylelint-disable no-descending-specificity -- Intended. */
+/* stylelint-disable no-duplicate-selectors -- Intended. */
+html {
+	block-size: 100%;
+}
+
+body {
+	min-block-size: 100%;
+}
+
+/* Embedded content
+   ======================================== */
+
+/*
+1. Block display is usually what we want.
+2. Responsive by default.
+3. The `vertical-align` removes strange space-below in case authors overwrite the `display` value.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+	display: block; /* 1 */
+	max-inline-size: 100%; /* 2 */
+	vertical-align: middle; /* 3 */
+}
+
+/*
+Maintain intrinsic aspect ratios when `max-inline-size` is applied (`iframe`, `embed, and `object` are also embedded, but have no intrinsic ratio, so their `block-size` needs to be set explicitly).
+*/
+
+img,
+svg,
+video,
+canvas {
+	block-size: auto;
+}
+
+/*
+Change the fill color to match the text color.
+*/
+
+svg:not([fill]) {
+	fill: currentcolor;
+}
+
+/* Tabular data
+======================================== */
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari.
+2. Collapse border spacing.
+3. Correct table border color inheritance in Chrome and Safari.
+*/
+
+table {
+	text-indent: 0; /* 1 */
+	border-collapse: collapse; /* 2 */
+	border-color: currentcolor; /* 3 */
+}
+
+/*
+Make `th` alignment consistent with `td` alignment.
+*/
+
+th {
+	text-align: start;
+}
+
+/*
+Add paddings and borders to table cells.
+*/
+
+th,
+td {
+	padding-block: 0.25em;
+	padding-inline: 0.5em;
+	border: 1px solid;
+}
+
+/* Forms
+   ======================================== */
+
+/*
+1. Remove the margin on controls in all browsers.
+2. Add typography and color inheritance.
+*/
+
+button,
+input,
+select,
+textarea {
+	margin: 0; /* 1 */
+	font: inherit; /* 2 */
+	color: inherit; /* 2 */
+	letter-spacing: inherit; /* 2 */
+	word-spacing: inherit; /* 2 */
+}
+
+/*
+Responsive by default by restricting sizing to the page width.
+*/
+
+input,
+select,
+textarea {
+	max-inline-size: 100%;
+}
+
+/*
+1. Remove the margin.
+2. Change the border appearance.
+*/
+
+fieldset {
+	margin-inline: 0; /* 1 */
+	border-color: currentcolor; /* 2 */
+	border-style: solid; /* 2 */
+}
+
+/* ============ 1. GLOBAL CUSTOM PROPERTIES ============ */
+
+:root {
+	/*
+	 *  Viewports from design:
+	 *  Min:  ___px
+	 *  Max: ____px
+	 *
+	 *  Responsive Design Approach: Mobile-First
+	 */
+
+	/* Font Sizes
+       ======================================== */
+
+	/* @link https://utopia.fyi/clamp/calculator */
+}
+
+/* ============ 2. GLOBAL AND INHERITED STYLES ============ */
+
+/* All elements
+   ======================================== */
+
+/* Sections and headings
+   ======================================== */
+
+/* Grouping content
+   ======================================== */
+
+/* Text-level semantics
+   ======================================== */
+
+/* Embedded content
+   ======================================== */
+
+/* Tabular data
+   ======================================== */
+
+/* Forms
+   ======================================== */
+
+/* Interactive elements
+   ======================================== */
+
+/* Scripting
+   ======================================== */
+
+/* ============ 3. COMPOSITION / LAYOUT PRIMITIVES ============ */
+
+/* ============ 4. UTILITY CLASSES ============ */
+
+/* Standard
+   ======================================== */
+
+.visually-hidden {
+	position: absolute !important;
+	inline-size: 1px !important;
+	block-size: 1px !important;
+	overflow: hidden !important;
+	clip-path: inset(50%) !important;
+	white-space: nowrap !important;
+}
+
+/* Design Tokens: Layout
+   ======================================== */
+
+/* Display */
+
+/* Position */
+
+/* Design Tokens: Flexbox & Grid
+   ======================================== */
+
+/* Justify Content */
+
+/* Design Tokens: Spacing
+   ======================================== */
+
+/* Padding */
+
+/* Margin */
+
+/* Space Between */
+
+/* Design Tokens: Sizing
+   ======================================== */
+
+/* Max Width */
+
+/* Design Tokens: Typography
+   ======================================== */
+
+/* Font Size */
+
+/* Text Color */
+
+/* Design Tokens: Backgrounds
+   ======================================== */
+
+/* Design Tokens: Borders
+   ======================================== */
+
+/* ============ 5. BLOCKS ============ */
+
+/* ============ 6. EXCEPTIONS ============ */
