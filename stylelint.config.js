@@ -86,12 +86,6 @@ export default {
 				severity: "warning",
 			},
 		],
-		"time-min-milliseconds": [
-			100,
-			{
-				severity: "warning",
-			},
-		],
 
 		// Enforce conventions: Patterns
 		// "custom-media-pattern": null,
