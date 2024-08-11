@@ -2,14 +2,13 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"settings": {
-		"appearanceTools": false,
-		"background": {},
+		"appearanceTools": true,
+		"background": {
+			"backgroundImage": true,
+			"backgroundSize": true
+		},
 		"blocks": {},
-		"border": {},
 		"color": {
-			"link": true,
-			"text": true,
-			"background": true,
 			"custom": false,
 			"customDuotone": false,
 			"customGradient": false,
@@ -22,37 +21,37 @@
 				{
 					"name": "Base",
 					"slug": "base",
-					"color": ""
+					"color": "_____"
 				},
 				{
 					"name": "Base / Two",
 					"slug": "base-2",
-					"color": ""
+					"color": "_____"
 				},
 				{
 					"name": "Contrast",
 					"slug": "contrast",
-					"color": ""
+					"color": "_____"
 				},
 				{
 					"name": "Contrast / Two",
 					"slug": "contrast-2",
-					"color": ""
+					"color": "_____"
 				},
 				{
 					"name": "Accent",
 					"slug": "accent",
-					"color": ""
+					"color": "_____"
 				},
 				{
 					"name": "Accent / Two",
 					"slug": "accent-2",
-					"color": ""
+					"color": "_____"
 				},
 				{
 					"name": "Accent / Three",
 					"slug": "accent-3",
-					"color": ""
+					"color": "_____"
 				}
 			]
 		},
@@ -63,27 +62,39 @@
 			},
 			"lineHeight": {
 				"flat": "1",
-				"xx-small": "1.125",
-				"x-small": "1.2",
 				"small": "1.25",
-				"default": "1.6"
+				"default": "1.5"
 			}
 		},
-		"dimensions": {},
 		"layout": {
-			"allowEditing": true,
 			"allowCustomContentAndWideSize": false,
-			"contentSize": "__rem",
+			"contentSize": "_____",
 			"wideSize": "___rem"
 		},
-		"lightbox": {},
-		"position": {},
-		"shadow": {},
-		"spacing": {},
+		"shadow": {
+			"presets": [
+				{
+					"name": "_____",
+					"slug": "_____",
+					"shadow": "_____"
+				}
+			]
+		},
+		"spacing": {
+			"customSpacingSize": false,
+			"defaultSpacingSizes": false,
+			"spacingScale": {},
+			"spacingSizes": [
+				{
+					"name": "_____",
+					"slug": "_____",
+					"size": "_____"
+				}
+			]
+		},
 		"typography": {
 			"customFontSize": false,
 			"defaultFontSizes": false,
-			"dropCap": false,
 			"fluid": false,
 			"fontFamilies": [
 				{
@@ -113,27 +124,26 @@
 					]
 				},
 				{
-					"name": "",
-					"slug": "",
-					"fontFamily": ""
+					"name": "_____",
+					"slug": "_____",
+					"fontFamily": "_____"
 				}
 			],
 			"fontSizes": [
 				{
-					"name": "",
-					"slug": "",
-					"size": ""
+					"name": "_____",
+					"slug": "_____",
+					"size": "_____"
 				}
 			],
-			"fontStyle": false,
-			"fontWeight": false,
-			"letterSpacing": false,
-			"lineHeight": false,
-			"textAlign": false,
-			"textColumns": false,
-			"textDecoration": false,
-			"textTransform": false,
-			"writingMode": false
+			"fontStyle": true,
+			"fontWeight": true,
+			"letterSpacing": true,
+			"textAlign": true,
+			"textColumns": true,
+			"textDecoration": true,
+			"textTransform": true,
+			"writingMode": true
 		},
 		"useRootPaddingAwareAlignments": true
 	},
