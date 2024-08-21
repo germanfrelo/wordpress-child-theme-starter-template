@@ -61,7 +61,7 @@
 		"markdownlint-cli2": "0.13.0",
 		"prettier": "3.3.3",
 		"stylelint": "16.8.1",
-		"stylelint-config-recess-order": "5.0.1",
+		"stylelint-config-recess-order": "5.1.0",
 		"stylelint-config-standard": "36.0.1"
 	}
 }
