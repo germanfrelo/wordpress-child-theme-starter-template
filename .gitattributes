@@ -2,3 +2,6 @@
 # - https://git-scm.com/docs/gitattributes#_end_of_line_conversion.
 # - https://aleksandrhovhannisyan.com/blog/crlf-vs-lf-normalizing-line-endings-in-git/#normalizing-line-endings-in-git-with-gitattributes.
 * text=auto
+
+# Excluded files and directories from GitHub language statistics.
+*.config.js linguist-vendored
