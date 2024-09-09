@@ -33,7 +33,7 @@
 		"type": "git",
 		"url": "https://github.com/germanfrelo/wordpress-child-theme-starter-template.git"
 	},
-	"license": "ISC",
+	"license": "MIT",
 	"author": "Germán Freixinós",
 	"type": "module",
 	"main": "",
