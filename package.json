@@ -1,24 +1,37 @@
 {
-	"name": "wordpress-custom-theme-template",
+	"name": "wordpress-child-theme-starter-template",
 	"version": "1.0.0",
 	"private": true,
-	"description": "My personal WordPress template to use with a child theme of the latest default WordPress theme.",
+	"description": "My WordPress starter template for creating child themes based on the latest default WordPress theme.",
 	"keywords": [
-		"template",
-		"repository",
-		"template-project",
-		"repository-template",
+		"boilerplate-front-end",
+		"boilerplate-template",
+		"boilerplate-wordpress",
+		"boilerplate",
 		"repo-template",
+		"repository-template",
+		"repository",
+		"starter-template",
+		"template-project",
 		"template-repository",
-		"wordpress-custom-theme-template"
+		"template",
+		"wordpress-boilerplate",
+		"wordpress-child-theme-starter-template",
+		"wordpress-child-theme",
+		"wordpress-custom-theme-template",
+		"wordpress-development",
+		"wordpress-site",
+		"wordpress-starter-theme",
+		"wordpress-theme",
+		"wordpress"
 	],
-	"homepage": "https://github.com/germanfrelo/wordpress-custom-theme-template#readme",
+	"homepage": "https://github.com/germanfrelo/wordpress-child-theme-starter-template#readme",
 	"bugs": {
-		"url": "https://github.com/germanfrelo/wordpress-custom-theme-template/issues"
+		"url": "https://github.com/germanfrelo/wordpress-child-theme-starter-template/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/germanfrelo/wordpress-custom-theme-template.git"
+		"url": "https://github.com/germanfrelo/wordpress-child-theme-starter-template.git"
 	},
 	"license": "ISC",
 	"author": "Germán Freixinós",
