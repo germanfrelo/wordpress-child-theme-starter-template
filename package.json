@@ -2,7 +2,7 @@
 	"name": "wordpress-child-theme-starter-template",
 	"version": "1.0.0",
 	"private": true,
-	"description": "My WordPress starter template for creating child themes based on the latest default WordPress theme.",
+	"description": "My opinionated WordPress starter template for creating child themes of the latest default WordPress theme.",
 	"keywords": [
 		"boilerplate-front-end",
 		"boilerplate-template",
