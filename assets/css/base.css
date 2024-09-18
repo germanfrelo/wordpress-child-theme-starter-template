@@ -15,10 +15,10 @@
 /* Document
 ======================================== */
 
-/*
-1. Use border box sizing by default, globally. [Opinionated]
-2. Backgrounds images and mask images do not repeat by default. [Opinionated]
-*/
+/**
+ * 1. Use border box sizing by default, globally. [Opinionated]
+ * 2. Backgrounds images and mask images do not repeat by default. [Opinionated]
+ */
 
 *,
 *::before,
@@ -28,11 +28,11 @@
 	mask-repeat: no-repeat; /* 2 */
 }
 
-/*
-1. Breaks words to prevent text overflow. [Opinionated]
-2. Use a 4-space tab width instead of the default 8. [Opinionated]
-3. Prevent WebKit-based browsers on iOS (all iOS browsers) from automatically increasing the default text size in landscape orientation (see https://css-tricks.com/your-css-reset-needs-text-size-adjust-probably/). [Opinionated]
-*/
+/**
+ * 1. Breaks words to prevent text overflow. [Opinionated]
+ * 2. Use a 4-space tab width instead of the default 8. [Opinionated]
+ * 3. Prevent WebKit-based browsers on iOS (all iOS browsers) from automatically increasing the default text size in landscape orientation (see https://css-tricks.com/your-css-reset-needs-text-size-adjust-probably/). [Opinionated]
+ */
 
 html {
 	overflow-wrap: break-word; /* 1 */
@@ -41,22 +41,22 @@ html {
 	-webkit-text-size-adjust: none; /* 3 */
 }
 
-/*
-Smooth scrolling, but only when focused in the page to prevent unnaturally scrolling when tabbing though the results of a search. [Opinionated]
-*/
+/**
+ * Smooth scrolling, but only when focused in the page to prevent unnaturally scrolling when tabbing though the results of a search. [Opinionated]
+ */
 
 html:focus-within {
 	scroll-behavior: smooth;
 }
 
-/*
-[Opinionated]
-When users prefer reduced motion:
-1. Remove fixed background attachment.
-2. Remove transitions.
-3. Remove animations/immediately jump any animation to the end point.
-4. Remove timed scrolling behaviors.
-*/
+/**
+ * [Opinionated]
+ * When users prefer reduced motion:
+ * 1. Remove fixed background attachment.
+ * 2. Remove transitions.
+ * 3. Remove animations/immediately jump any animation to the end point.
+ * 4. Remove timed scrolling behaviors.
+ */
 
 @media (prefers-reduced-motion: reduce) {
 	*,
@@ -79,9 +79,9 @@ When users prefer reduced motion:
 /* Sections and Headings
 ======================================== */
 
-/*
-Allow percentage-based heights. [Opinionated]
-*/
+/**
+ * Allow percentage-based heights. [Opinionated]
+ */
 
 /* stylelint-disable no-descending-specificity -- Intended. */
 /* stylelint-disable no-duplicate-selectors -- Intended. */
@@ -96,10 +96,10 @@ body {
 /* Grouping content and Text-level semantics
 ======================================== */
 
-/*
-1. Correct the inheritance and scaling of font size in all browsers.
-2. Correct the odd `em` font sizing in all browsers.
-*/
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
 
 pre,
 code,
@@ -110,9 +110,9 @@ samp {
 	font-size: 1em; /* 2 */
 }
 
-/*
-Add the correct font weight in Chrome and Safari.
-*/
+/**
+ * Add the correct font weight in Chrome and Safari.
+ */
 
 b,
 strong {
@@ -122,11 +122,11 @@ strong {
 /* Embedded content
 ======================================== */
 
-/*
-1. Block display is usually what we want. [Opinionated]
-2. Responsive by default. [Opinionated]
-3. The `vertical-align` removes strange space-below in case authors overwrite the `display` value. [Opinionated]
-*/
+/**
+ * 1. Block display is usually what we want. [Opinionated]
+ * 2. Responsive by default. [Opinionated]
+ * 3. The `vertical-align` removes strange space-below in case authors overwrite the `display` value. [Opinionated]
+ */
 
 img,
 svg,
@@ -141,9 +141,9 @@ object {
 	vertical-align: middle; /* 3 */
 }
 
-/*
-Maintain intrinsic aspect ratios when `max-inline-size` is applied (`iframe`, `embed, and `object` are also embedded, but have no intrinsic ratio, so their `block-size` needs to be set explicitly). [Opinionated]
-*/
+/**
+ * Maintain intrinsic aspect ratios when `max-inline-size` is applied (`iframe`, `embed, and `object` are also embedded, but have no intrinsic ratio, so their `block-size` needs to be set explicitly). [Opinionated]
+ */
 
 img,
 svg,
@@ -152,25 +152,25 @@ canvas {
 	block-size: auto;
 }
 
-/*
-There is no good reason elements default to 300px, and audio files are unlikely to come with a width attribute. [Opinionated]
-*/
+/**
+ * There is no good reason elements default to 300px, and audio files are unlikely to come with a width attribute. [Opinionated]
+ */
 
 audio {
 	inline-size: 100%;
 }
 
-/*
-Change the fill color to match the text color. [Opinionated]
-*/
+/**
+ * Change the fill color to match the text color. [Opinionated]
+ */
 
 svg:not([fill]) {
 	fill: currentcolor;
 }
 
-/*
-Change the border appearance. [Opinionated]
-*/
+/**
+ * Change the border appearance. [Opinionated]
+ */
 
 iframe {
 	border-color: currentcolor;
@@ -180,19 +180,19 @@ iframe {
 /* Tabular data
 ======================================== */
 
-/*
-1. Collapse border spacing. [Opinionated]
-2. Correct table border color inheritance in Chrome and Safari (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016).
-*/
+/**
+ * 1. Collapse border spacing. [Opinionated]
+ * 2. Correct table border color inheritance in Chrome and Safari (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016).
+ */
 
 table {
 	border-collapse: collapse; /* 1 */
 	border-color: currentcolor; /* 2 */
 }
 
-/*
-Make `th` alignment consistent with `td` alignment. [Opinionated]
-*/
+/**
+ * Make `th` alignment consistent with `td` alignment. [Opinionated]
+ */
 
 th {
 	text-align: start;
@@ -201,10 +201,10 @@ th {
 /* Forms
 ======================================== */
 
-/*
-1. Remove the margin on controls in all browsers. [Opinionated]
-2. Add typography inheritance. [Opinionated]
-*/
+/**
+ * 1. Remove the margin on controls in all browsers. [Opinionated]
+ * 2. Add typography inheritance. [Opinionated]
+ */
 
 input,
 textarea,
@@ -216,9 +216,9 @@ button {
 	word-spacing: inherit; /* 2 */
 }
 
-/*
-Responsive by default by restricting sizing to the page width. [Opinionated]
-*/
+/**
+ * Responsive by default by restricting sizing to the page width. [Opinionated]
+ */
 
 input,
 textarea,
@@ -226,10 +226,10 @@ select {
 	max-inline-size: 100%;
 }
 
-/*
-1. Remove the margin. [Opinionated]
-2. Change the border appearance. [Opinionated]
-*/
+/**
+ * 1. Remove the margin. [Opinionated]
+ * 2. Change the border appearance. [Opinionated]
+ */
 
 fieldset {
 	margin-inline: 0; /* 1 */
@@ -240,12 +240,12 @@ fieldset {
 /* Interactive elements
 ======================================== */
 
-/*
-1. Add the correct display in Safari. See:
-- https://caniuse.com/mdn-html_elements_summary_display_list_item
-- https://bugs.webkit.org/show_bug.cgi?id=157323
-2. Change the cursor to feel it's interactive. [Opinionated]
-*/
+/**
+ * 1. Add the correct display in Safari.
+ * @link https://caniuse.com/mdn-html_elements_summary_display_list_item
+ * @link https://bugs.webkit.org/show_bug.cgi?id=157323
+ * 2. Change the cursor to feel it's interactive. [Opinionated]
+ */
 
 summary {
 	display: list-item; /* 1 */
