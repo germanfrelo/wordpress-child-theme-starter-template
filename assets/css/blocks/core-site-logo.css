@@ -1,0 +1,12 @@
+/**
+ * Site Logo
+ *
+ * @link https://github.com/WordPress/gutenberg/tree/trunk/packages/block-library/src/site-logo
+ * @link https://wordpress.org/support/article/site-logo-block/
+ */
+
+/* Make site logo height responsive. */
+.wp-block-site-logo img {
+	width: auto;
+	height: var(--site-logo-block-size, auto);
+}

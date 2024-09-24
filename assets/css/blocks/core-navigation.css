@@ -1,0 +1,104 @@
+/* stylelint-disable selector-not-notation -- To keep the same specificity of default WP selectors. */
+
+/**
+ * Navigation
+ *
+ * @link https://github.com/WordPress/gutenberg/tree/trunk/packages/block-library/src/navigation
+ * @link https://wordpress.org/support/article/navigation-block/
+ */
+
+/**
+ * Navigation block
+ */
+
+/* Increase the default size (24px) of burger and close icons. */
+.wp-block-navigation {
+	--navigation-icon-size: 32px;
+}
+
+/* Push menu button to the right */
+.is-layout-flex > .wp-block-navigation {
+	margin-inline-start: auto;
+}
+
+/**
+ * Increase the viewport width at which navigation switches between expanded and collapsed.
+ */
+
+/* Override styles at default breakpoint */
+@media (min-width: 600px) {
+	/* Keep showing menu button */
+	.wp-block-navigation__responsive-container-open:not(.always-shown) {
+		display: flex;
+	}
+
+	/* Keep hiding expanded menu */
+	.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+		display: none;
+	}
+}
+
+/* Add styles at custom breakpoint */
+@media (min-width: 960px) {
+	/* Revert pushing menu button to the right */
+	.is-layout-flex > .wp-block-navigation {
+		margin-inline-start: revert;
+	}
+
+	/* Hide menu button */
+	.wp-block-navigation__responsive-container-open:not(.always-shown) {
+		display: none;
+	}
+
+	/* Show expanded menu */
+	.wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+		display: block;
+	}
+}
+
+/**
+ * Menu Links
+ */
+
+.wp-block-navigation .wp-block-navigation-item__content:is(:hover, :focus, [aria-current="page"]) {
+	color: var(--wp--preset--color--accent);
+}
+
+.wp-block-navigation .wp-block-navigation-item__content[aria-current="page"] {
+	text-decoration-line: underline;
+	text-decoration-thickness: 0.1em;
+	text-underline-offset: 0.2em;
+}
+
+/**
+ * Menu Buttons
+ */
+
+/* Increase the default icon size (24px) */
+.wp-block-navigation__responsive-container-close svg,
+.wp-block-navigation__responsive-container-open svg {
+	width: var(--navigation-icon-size, 44px);
+	height: var(--navigation-icon-size, 44px);
+}
+
+/* Style menu buttons on hover & focus */
+.wp-block-navigation__responsive-container-close:is(:hover, :focus),
+.wp-block-navigation__responsive-container-open:is(:hover, :focus) {
+	color: var(--wp--preset--color--accent);
+}
+
+/**
+ * Overlay Menu
+ */
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	padding: var(--wp--preset--spacing--xxl, 1rem);
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+	padding-top: calc(var(--wp--preset--spacing--l) + var(--navigation-icon-size, 44px));
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
+	row-gap: var(--wp--preset--spacing--xxl, 1rem);
+}
