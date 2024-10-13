@@ -201,7 +201,7 @@ html {
  */
 
 /**
- * Make the main content fill the available vertical space so that if the main content is shorter than the height of the viewport, the footer "sticks" to the bottom.
+ * Let the main element fill the available vertical space so that if the content is shorter than the viewport height, the footer will "stick" to the bottom.
  */
 
 .wp-site-blocks:has(> main) {
