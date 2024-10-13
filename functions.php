@@ -11,9 +11,9 @@
 
 function themeslug_enqueue_styles() {
 	/* Load custom stylesheets */
-	wp_enqueue_style( 'base-style', get_theme_file_uri( 'assets/css/base.css' ) );
-	wp_enqueue_style( 'base-style', get_theme_file_uri( 'assets/css/layouts.css' ) );
-	wp_enqueue_style( 'base-style', get_theme_file_uri( 'assets/css/utility-classes.css' ) );
+	wp_enqueue_style( 'wp-base-styles', get_theme_file_uri( 'assets/css/base.css' ) );
+	wp_enqueue_style( 'themeslug-layouts', get_theme_file_uri( 'assets/css/layouts.css' ) );
+	wp_enqueue_style( 'themeslug-utility-classes', get_theme_file_uri( 'assets/css/utility-classes.css' ) );
 
 	/* Load the theme's style.css file */
 	wp_enqueue_style( 'themeslug-style', get_stylesheet_uri() );
