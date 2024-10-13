@@ -14,6 +14,7 @@ function themeslug_enqueue_styles() {
 	wp_enqueue_style( 'wp-base-styles', get_theme_file_uri( 'assets/css/base.css' ) );
 	wp_enqueue_style( 'themeslug-layouts', get_theme_file_uri( 'assets/css/layouts.css' ) );
 	wp_enqueue_style( 'themeslug-utility-classes', get_theme_file_uri( 'assets/css/utility-classes.css' ) );
+	wp_enqueue_style( 'themeslug-gravity-forms', get_theme_file_uri( 'assets/css/gravity-forms.css' ) );
 
 	/* Load the theme's style.css file */
 	wp_enqueue_style( 'themeslug-style', get_stylesheet_uri() );
@@ -33,6 +34,7 @@ function themeslug_setup() {
 		get_theme_file_uri( 'assets/css/base.css' ),
 		get_theme_file_uri( 'assets/css/layouts.css' ),
 		get_theme_file_uri( 'assets/css/utility-classes.css' ),
+		get_theme_file_uri( 'assets/css/gravity-forms.css' ),
 
 		/* Load the theme's style.css file */
 		get_stylesheet_uri()
