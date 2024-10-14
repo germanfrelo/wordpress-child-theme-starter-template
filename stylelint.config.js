@@ -38,6 +38,9 @@ export default {
 			},
 		],
 
+		// Enforce conventions: Empty lines
+		"declaration-empty-line-before": "never",
+
 		// Notation
 		// TODO: Remove when browser support is ~95%.
 		"media-feature-range-notation": null,
