@@ -150,6 +150,14 @@ canvas {
 	block-size: auto;
 }
 
+/**
+ * If an SVG doesn't have a `fill` attribute, use the text color.
+ */
+
+svg:where(:not([fill])) {
+	fill: currentcolor;
+}
+
 /* Tabular data
 ======================================== */
 
