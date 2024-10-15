@@ -82,6 +82,7 @@ add_action( 'init', 'themeslug_block_style_variations' );
 function themeslug_block_stylesheets() {
 	// Add the block name (with namespace) for each style.
 	$blocks = array(
+		'core/button',
 		'core/navigation',
 		'core/query-pagination',
 		'core/site-logo',
