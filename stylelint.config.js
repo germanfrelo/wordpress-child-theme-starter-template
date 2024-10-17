@@ -30,19 +30,12 @@ export default {
 			},
 		],
 
-		// Enforce conventions: Allowed, disallowed & required
-		"color-named": [
-			"never",
-			{
-				ignore: ["inside-function"],
-			},
-		],
-
 		// Enforce conventions: Empty lines
 		"declaration-empty-line-before": "never",
 
 		// Notation
-		// TODO: Remove when browser support is ~95%.
+		// Override 'context' value from 'stylelint-config-standard'
+		// TODO: Remove when browser support is ~95%
 		"media-feature-range-notation": null,
 
 		// Enforce conventions: Patterns
