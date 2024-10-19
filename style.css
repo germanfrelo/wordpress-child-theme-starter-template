@@ -1,10 +1,10 @@
 /**
  * Theme Name:   ________________________________________
+ * Description:  ________________________________________
  * Template:     ________________________________________
- * Description:  Custom child theme for ________________.
- * Version:      1.0.0
  * Author:       ________________________________________
  * Author URI:   ________________________________________
+ * Version:      1.0.0
  * Tested up to: ________
  * License:      GNU General Public License v2 or later
  * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
@@ -32,10 +32,9 @@
 :root {
 	/**
 	 * Viewport Widths
+	 * Min:  375px
+	 * Max: 1440px
 	 */
-
-	--viewport-min: 375px;
-	--viewport-max: 1440px;
 
 	/**
 	 * Fluid Type Scale
@@ -136,7 +135,6 @@
 	 */
 
 	--icon-min-size: 44px;
-	--site-logo-block-size: var(____, auto);
 }
 
 /**
@@ -148,10 +146,10 @@
  */
 
 /*
- * <html> & all elements
+ * Root & Universal
  */
 
-/* To better compare website with design in Figma on macOS */
+/* To match the font smoothing used in the design in Figma */
 html {
 	-webkit-font-smoothing: antialiased;
 }
@@ -190,10 +188,6 @@ html {
  * Interactive elements
  */
 
-/*
- * Scripting
- */
-
 /**
  * ============================================================
  * 3. Local/Scoped Styles
@@ -201,20 +195,21 @@ html {
  */
 
 /**
- * Let the main element fill the available vertical space so that if the content is shorter than the viewport height, the footer will "stick" to the bottom.
+ * Site Blocks
+ * Let `main` fill the available vertical space so that if the content is shorter than the viewport height, the footer will "stick" to the bottom.
  */
 
 .wp-site-blocks:has(> main) {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	min-block-size: 100vh;
 }
 
-.wp-site-blocks > main {
+.wp-site-blocks:has(> main) > main {
 	flex-grow: 1;
 }
 
-.wp-site-blocks:has(> main) > * {
+.wp-site-blocks:has(> main) > :not(main) {
 	flex-shrink: 0;
 }
 

@@ -9,7 +9,9 @@ export default {
 	reportInvalidScopeDisables: true,
 	reportNeedlessDisables: true,
 	rules: {
-		// Avoid errors: Duplicate
+		/**
+		 * Avoid errors: Duplicate
+		 */
 		"font-family-no-duplicate-names": [
 			true,
 			{
@@ -18,7 +20,9 @@ export default {
 			},
 		],
 
-		// Avoid errors: Unknown
+		/**
+		 * Avoid errors: Unknown
+		 */
 		"declaration-property-value-no-unknown": true,
 		"media-feature-name-value-no-unknown": true,
 		"no-unknown-animations": true,
@@ -30,15 +34,21 @@ export default {
 			},
 		],
 
-		// Enforce conventions: Empty lines
+		/**
+		 * Enforce conventions: Empty lines
+		 */
 		"declaration-empty-line-before": "never",
 
-		// Notation
-		// Override 'context' value from 'stylelint-config-standard'
-		// TODO: Remove when browser support is ~95%
+		/**
+		 * Enforce conventions: Notation
+		 */
+		// Override 'context' value from 'stylelint-config-standard'.
+		// TODO: Remove when browser support is ~95% (https://caniuse.com/css-media-range-syntax).
 		"media-feature-range-notation": null,
 
-		// Enforce conventions: Patterns
+		/**
+		 * Enforce conventions: Pattern
+		 */
 		"custom-media-pattern": null,
 		"custom-property-pattern": null,
 		"keyframes-name-pattern": null,

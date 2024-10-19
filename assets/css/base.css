@@ -151,7 +151,7 @@ canvas {
 }
 
 /**
- * If an SVG doesn't have a `fill` attribute, use the text color.
+ * Make SVGs inherit color if they don't have a `fill` attribute.
  */
 
 svg:where(:not([fill])) {

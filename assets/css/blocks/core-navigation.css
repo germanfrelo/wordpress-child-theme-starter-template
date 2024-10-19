@@ -17,7 +17,7 @@
 }
 
 /* Push menu button to the right */
-.is-layout-flex > .wp-block-navigation {
+header.wp-block-template-part .wp-block-navigation {
 	margin-inline-start: auto;
 }
 
@@ -41,7 +41,7 @@
 /* Add styles at custom breakpoint */
 @media (min-width: 960px) {
 	/* Revert pushing menu button to the right */
-	.is-layout-flex > .wp-block-navigation {
+	header.wp-block-template-part .wp-block-navigation {
 		margin-inline-start: revert;
 	}
 
@@ -57,14 +57,14 @@
 }
 
 /**
- * Menu Links
+ * Menu Links (Header)
  */
 
-.wp-block-navigation .wp-block-navigation-item__content:is(:hover, :focus, [aria-current="page"]) {
+header.wp-block-template-part .wp-block-navigation .wp-block-navigation-item__content:is(:hover, :focus, [aria-current="page"]) {
 	color: var(--wp--preset--color--accent);
 }
 
-.wp-block-navigation .wp-block-navigation-item__content[aria-current="page"] {
+header.wp-block-template-part .wp-block-navigation .wp-block-navigation-item__content[aria-current="page"] {
 	text-decoration-line: underline;
 	text-decoration-thickness: 0.1em;
 	text-underline-offset: 0.2em;

@@ -45,7 +45,6 @@
 .gform-conversational.gform-theme--foundation {
 	--gf-convo-content-gap: var(--wp--style--block-gap, 1.5em);
 	--gf-convo-content-max-width: var(--wp--style--global--content-size);
-
 	line-height: revert;
 }
 

@@ -6,6 +6,10 @@
  * Ref: https://piccalil.li/blog/how-i-build-a-button-component/
  */
 
+/**
+ * Default Button Style (Fill)
+ */
+
 /* Better default button layout in case it has an icon */
 .wp-element-button,
 .wp-block-button__link {
@@ -24,8 +28,11 @@
 	block-size: var(--button-icon-size, 1.25em);
 }
 
-/* Style: Outline */
-.wp-block-button.is-style-outline > :is(.wp-element-button, .wp-block-button__link):not(.has-text-color, .has-background):is(:hover, :focus) {
+/**
+ * Button Style Variation: Outline
+ */
+
+.wp-block-button.is-style-outline > :is(.wp-element-button, .wp-block-button__link):is(:hover, :focus) {
 	color: var(--wp--preset--color--base);
 	background-color: var(--wp--preset--color--contrast);
 	border-color: var(--wp--preset--color--contrast);
