@@ -8,6 +8,30 @@
  */
 
 /**
+ * The Reel
+ *
+ * @link https://every-layout.dev/layouts/reel/
+ */
+
+.reel {
+	display: flex;
+	block-size: auto;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.reel > * {
+	flex: 0 0 auto;
+	margin: 0;
+}
+
+.reel img {
+	flex-basis: auto;
+	inline-size: auto;
+	block-size: 100%;
+}
+
+/**
  * The Sidebar
  *
  * Available classes for use:
@@ -60,4 +84,61 @@
 
 [class*="with-sidebar-"][class*="-80\%"] {
 	--non-sidebar-min-size: 80%;
+}
+
+/*
+ * The Switcher
+ *
+ * With this current implementation, the maximum number of elements allowed to appear in the horizontal configuration is 2.
+ *
+ * @param {string} [threshold="24rem"] - The container width at which the component switches between a horizontal and vertical layout.
+ *
+ * @see {@link https://every-layout.dev/layouts/switcher/}
+ */
+
+.switcher {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.switcher > * {
+	flex-basis: var(--threshold, 24rem);
+	flex-grow: 1;
+	margin: 0;
+}
+
+.switcher--8rem {
+	--threshold: 8rem;
+}
+
+.switcher--12rem {
+	--threshold: 12rem;
+}
+
+.switcher--16rem {
+	--threshold: 16rem;
+}
+
+.switcher--20rem {
+	--threshold: 20rem;
+}
+
+.switcher--24rem {
+	--threshold: 24rem;
+}
+
+.switcher--28rem {
+	--threshold: 28rem;
+}
+
+.switcher--32rem {
+	--threshold: 32rem;
+}
+
+.switcher--36rem {
+	--threshold: 36rem;
+}
+
+.switcher--40rem {
+	--threshold: 40rem;
 }

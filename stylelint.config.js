@@ -54,5 +54,10 @@ export default {
 		"keyframes-name-pattern": null,
 		"selector-class-pattern": null,
 		"selector-id-pattern": null,
+
+		/**
+		 * Enforce conventions: Redundant
+		 */
+		"declaration-block-no-redundant-longhand-properties": null,
 	},
 };

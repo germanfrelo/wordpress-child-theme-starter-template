@@ -5,6 +5,85 @@
  */
 
 /**
+ * ========================================
+ * DEL ÚLTIMO PROYECTO
+ * ========================================
+ */
+
+/**
+ * Plugin: Gravity Forms
+ */
+
+.gform-theme--api,
+.gform-theme--foundation,
+.gform-theme--framework {
+	--gf-color-danger: var(--wp--preset--color--accent, red);
+	--gf-color-primary: var(--wp--preset--color--accent, inherit);
+	--gf-ctrl-desc-color: inherit;
+	--gf-font-size-primary: var(--wp--preset--font-size--xx-small, 1rem);
+	--gf-font-weight-primary: var(--wp--custom--font-weight--light, 300);
+	--gf-form-gap-y: var(--space-s, 2rem);
+}
+
+.gform-theme--api,
+.gform_required_legend {
+	display: none;
+}
+
+.gform-theme--framework .gform-field-label > .gfield_required {
+	display: none;
+}
+
+.gform-theme--framework .gform-field-label {
+	font-size: var(--wp--preset--font-size--small, 1rem);
+	font-weight: var(--wp--custom--font-weight--medium, 500);
+	line-height: var(--wp--custom--line-height--default, normal);
+	color: var(--wp--preset--color--base, inherit);
+	letter-spacing: var(--wp--custom--letter-spacing--wide, normal);
+}
+
+.gform-theme.gform-theme--framework.gform_wrapper input:is([type="submit"], [type="button"], [type="reset"]).button.gform_button {
+	padding-block: 0.5em;
+	padding-inline: 1.5em;
+	font-size: var(--wp--preset--font-size--buttons, 1rem);
+	font-weight: var(--wp--custom--font-weight--medium, 500);
+	line-height: var(--wp--custom--line-height--default, normal);
+	color: var(--wp--preset--color--base, inherit);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: var(--wp--custom--letter-spacing--wide, normal);
+	background-color: var(--wp--preset--color--accent);
+	border-radius: 2.5em;
+}
+
+.gform-theme--framework input[type="checkbox"] {
+	--gf-local-radius: 50%;
+	background-color: inherit;
+}
+
+.gform-theme--framework .gfield--type-choice .gchoice,
+.gform-theme--framework .gfield--type-choice .ginput_container_consent {
+	align-items: baseline;
+}
+
+.gform-theme--framework .gform_validation_errors .gform-icon {
+	border-color: var(--gf-form-validation-heading-icon-color);
+}
+
+@media (max-width: 600px) {
+	.gform-theme--foundation .gform_footer,
+	.gform-theme--foundation .gform_page_footer {
+		justify-content: center;
+	}
+}
+
+/**
+ * ========================================
+ * DE PROYECTOS ANTERIORES
+ * ========================================
+ */
+
+/**
  * Revert some Gravity Forms styles
  */
 
