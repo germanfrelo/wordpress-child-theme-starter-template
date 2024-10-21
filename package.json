@@ -1,54 +1,63 @@
 {
-	"name": "template",
+	"name": "wordpress-child-theme-starter-template",
 	"version": "1.0.0",
 	"private": true,
-	"description": "My repository template.",
+	"description": "My opinionated WordPress starter template for creating child themes of the latest default WordPress theme.",
 	"keywords": [
-		"template",
-		"repository",
-		"template-project",
-		"repository-template",
+		"boilerplate-front-end",
+		"boilerplate-template",
+		"boilerplate-wordpress",
+		"boilerplate",
 		"repo-template",
-		"template-repository"
+		"repository-template",
+		"repository",
+		"starter-template",
+		"template-project",
+		"template-repository",
+		"template",
+		"wordpress-boilerplate",
+		"wordpress-child-theme-starter-template",
+		"wordpress-child-theme",
+		"wordpress-custom-theme-template",
+		"wordpress-development",
+		"wordpress-site",
+		"wordpress-starter-theme",
+		"wordpress-theme",
+		"wordpress"
 	],
-	"homepage": "https://github.com/germanfrelo/template#readme",
+	"homepage": "https://github.com/germanfrelo/wordpress-child-theme-starter-template#readme",
 	"bugs": {
-		"url": "https://github.com/germanfrelo/template/issues"
+		"url": "https://github.com/germanfrelo/wordpress-child-theme-starter-template/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/germanfrelo/template.git"
+		"url": "https://github.com/germanfrelo/wordpress-child-theme-starter-template.git"
 	},
-	"license": "ISC",
-	"author": "Germán Freixinós López",
+	"license": "GPL-2.0-or-later",
+	"author": "Germán Freixinós",
 	"type": "module",
 	"main": "",
 	"scripts": {
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
-		"lint": "npm run lint:css && npm run lint:js && npm run lint:md",
-		"lint:fix": "npm run lint:css:fix && npm run lint:js:fix && npm run lint:md:fix",
-		"lint:css": "stylelint --max-warnings 0 \"**/*.css\"",
+		"lint": "npm run lint:css && npm run lint:js",
+		"lint:fix": "npm run lint:css:fix && npm run lint:js:fix",
+		"lint:css": "stylelint \"**/*.css\"",
 		"lint:css:fix": "npm run lint:css -- --fix",
 		"lint:js": "eslint --max-warnings 0",
 		"lint:js:fix": "npm run lint:js -- --fix",
-		"lint:md": "markdownlint-cli2",
-		"lint:md:fix": "npm run lint:md -- --fix",
 		"prepare": "husky"
 	},
 	"lint-staged": {
 		"*.css": [
-			"stylelint --max-warnings 0",
+			"stylelint",
 			"prettier --write"
 		],
 		"*.js": [
 			"eslint --max-warnings 0 --no-warn-ignored",
 			"prettier --write"
 		],
-		"*.md": [
-			"markdownlint-cli2 --fix"
-		],
-		"!(*.css|*.js|*.md)": [
+		"!(*.css|*.js)": [
 			"prettier --write --ignore-unknown"
 		]
 	},
@@ -58,7 +67,6 @@
 		"globals": "15.9.0",
 		"husky": "9.1.4",
 		"lint-staged": "15.2.8",
-		"markdownlint-cli2": "0.13.0",
 		"prettier": "3.3.3",
 		"stylelint": "16.8.1",
 		"stylelint-config-recess-order": "5.0.1",

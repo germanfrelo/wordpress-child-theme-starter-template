@@ -1,5 +1,14 @@
-# Created by https://www.toptal.com/developers/gitignore/api/git,node
-# Edit at https://www.toptal.com/developers/gitignore?templates=git,node
+### Prettier ###
+# By default, Prettier ignores files in:
+# - version control systems directories (".git", ".sl", ".svn" and ".hg")
+# - node_modules
+# Prettier will also follow rules specified in the ".gitignore" file if it exists in the same directory from which it is run.
+# Reference: https://prettier.io/docs/en/ignore.html.
+
+# --------------------------------------------------------------------------------
+
+# Created by https://www.toptal.com/developers/gitignore/api/git,node,wordpress
+# Edit at https://www.toptal.com/developers/gitignore?templates=git,node,wordpress
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -156,4 +165,49 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-# End of https://www.toptal.com/developers/gitignore/api/git,node
+### WordPress ###
+# Core
+#
+# Note: if you want to stage/commit WP core files
+# you can delete this whole section/until Configuration.
+/wp-admin/
+/wp-content/index.php
+/wp-content/languages
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Configuration
+wp-config.php
+
+# Example themes
+/wp-content/themes/twenty*/
+
+# Example plugin
+/wp-content/plugins/hello.php
+
+# Uploads
+/wp-content/uploads/
+
+# Log files
+
+# htaccess
+/.htaccess
+
+# All plugins
+# Note: If you wish to whitelist plugins,
+# uncomment the next line
+#/wp-content/plugins
+
+# All themes
+# Note: If you wish to whitelist themes,
+# uncomment the next line
+#/wp-content/themes
+
+
+# End of https://www.toptal.com/developers/gitignore/api/git,node,wordpress
