@@ -62,7 +62,7 @@
 			"lineHeight": {
 				"flat": "1",
 				"small": "1.2",
-				"default": "1.5"
+				"base": "1.5"
 			}
 		},
 		"layout": {
@@ -208,8 +208,8 @@
 			"fluid": false,
 			"fontFamilies": [
 				{
-					"name": "______",
-					"slug": "default",
+					"name": "Base",
+					"slug": "base",
 					"fontFamily": "______, sans-serif",
 					"fontFace": [
 						{
@@ -239,8 +239,8 @@
 					]
 				},
 				{
-					"name": "______",
-					"slug": "headings",
+					"name": "Special",
+					"slug": "special",
 					"fontFamily": "'______', sans-serif",
 					"fontFace": [
 						{
@@ -307,11 +307,11 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var:preset|font-family|default",
+			"fontFamily": "var:preset|font-family|base",
 			"fontSize": "var:preset|font-size|medium",
 			"fontStyle": "",
 			"fontWeight": "var:custom|font-weight|normal",
-			"lineHeight": "var:custom|line-height|default"
+			"lineHeight": "var:custom|line-height|base"
 		},
 		"color": {
 			"text": "var:preset|color|contrast",
