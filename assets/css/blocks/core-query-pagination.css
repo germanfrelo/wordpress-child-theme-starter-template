@@ -25,6 +25,7 @@
 .wp-block-query-pagination .wp-block-query-pagination-previous,
 .wp-block-query-pagination .wp-block-query-pagination-next {
 	display: flex;
+	flex-wrap: nowrap;
 	gap: 0.5em;
 	align-items: center;
 	justify-content: center;
