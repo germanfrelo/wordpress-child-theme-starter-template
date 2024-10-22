@@ -15,6 +15,7 @@
 
 .reel {
 	display: flex;
+	flex-wrap: nowrap;
 	block-size: auto;
 	overflow-x: auto;
 	overflow-y: hidden;
