@@ -1,1 +1,2 @@
+# npm command(s) that will run upon commiting:
 lint-staged
