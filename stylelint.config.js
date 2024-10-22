@@ -5,6 +5,7 @@ export default {
 		"stylelint-config-standard",
 		"stylelint-config-recess-order",
 	],
+	plugins: ["stylelint-plugin-defensive-css"],
 	reportDescriptionlessDisables: true,
 	reportInvalidScopeDisables: true,
 	reportNeedlessDisables: true,
@@ -108,5 +109,25 @@ export default {
 
 		// Redundant
 		"declaration-block-no-redundant-longhand-properties": null,
+
+		/**
+		 * ----------------------------------------
+		 * Plugin: use-defensive-css
+		 * ----------------------------------------
+		 */
+
+		"plugin/use-defensive-css": [
+			true,
+			{
+				"severity": "warning",
+				"accidental-hover": false, // Unncecessary
+				"background-repeat": false, // Solved in assets/css/base.css
+				"custom-property-fallbacks": false, // TODO: Test it
+				"flex-wrapping": false, // Unncecessary
+				"scroll-chaining": true,
+				"scrollbar-gutter": false, // TODO: Check browser support (~78% in Oct. 2024)
+				"vendor-prefix-grouping": true,
+			},
+		],
 	},
 };
