@@ -16,11 +16,6 @@
 	--navigation-icon-size: 32px;
 }
 
-/* Push menu button to the right */
-header.wp-block-template-part .wp-block-navigation {
-	margin-inline-start: auto;
-}
-
 /**
  * Increase the viewport width at which navigation switches between expanded and collapsed.
  */
@@ -38,13 +33,15 @@ header.wp-block-template-part .wp-block-navigation {
 	}
 }
 
+@media (max-width: 959px) {
+	/* Push to the right what's next to the site logo */
+	header.wp-block-template-part .is-content-justification-space-between > .wp-block-site-logo {
+		margin-inline-end: auto;
+	}
+}
+
 /* Add styles at custom breakpoint */
 @media (min-width: 960px) {
-	/* Revert pushing menu button to the right */
-	header.wp-block-template-part .wp-block-navigation {
-		margin-inline-start: revert;
-	}
-
 	/* Hide menu button */
 	.wp-block-navigation__responsive-container-open:not(.always-shown) {
 		display: none;
