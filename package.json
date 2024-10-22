@@ -46,7 +46,8 @@
 		"lint:css:fix": "npm run lint:css -- --fix",
 		"lint:js": "eslint --max-warnings 0",
 		"lint:js:fix": "npm run lint:js -- --fix",
-		"prepare": "husky"
+		"prepare": "husky",
+		"test": "npm run format:check && npm run lint"
 	},
 	"lint-staged": {
 		"*.css": [
