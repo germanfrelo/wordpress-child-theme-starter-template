@@ -684,9 +684,9 @@
 			},
 			"core/navigation": {
 				"typography": {
-					"fontWeight": "",
-					"textDecoration": "none",
-					"textAlign": "center"
+					"fontWeight": "var:custom|font-weight|medium",
+					"lineHeight": "var:custom|line-height|small",
+					"textDecoration": "none"
 				},
 				"elements": {
 					"link": {
